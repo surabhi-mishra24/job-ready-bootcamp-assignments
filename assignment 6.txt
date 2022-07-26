@@ -1,0 +1,132 @@
+sol 1:
+int main()
+{
+int n,sum=1;
+printf("Enter value of n :");
+scanf("%d",&n);
+for(int i=1;i<=n;i++)
+sum+=i;
+printf("Sum is %d",sum);
+}
+
+sol 2:
+
+int main()
+{
+int n,sum=0;
+printf("Enter vlaue of n :");
+scanf("%d",&n);
+for(int i=1;i<=n;i++)
+sum+=i*2;
+printf("Sum is %d",sum);
+}
+
+sol 3:
+
+int main()
+{
+int n,sum=0;
+printf("Enter vlaue of n :");
+scanf("%d",&n);
+for(int i=1;i<=n;i++)
+sum+=i*2-1;
+printf("Sum is %d",sum);
+}
+
+sol 4:
+
+int main()
+{
+int n,sum=0;
+printf("Enter vlaue of n :");
+scanf("%d",&n);
+for(int i=1;i<=n;i++)
+sum+=i*i;
+printf("Sum is %d",sum);
+}
+
+sol 5:
+
+int main()
+{
+int n,sum=0;
+printf("Enter vlaue of n :");
+scanf("%d",&n);
+for(int i=1;i<=n;i++)
+sum+=i*i*i;
+printf("Sum is %d",sum);
+}
+
+
+sol 6:
+
+int main()
+{
+int n,fact=1;
+printf("Enter value of n :");
+scanf("%d",&n);
+for(int i=1;i<=n;i++)
+fact*=i;
+printf("%d",fact);
+}
+
+sol 7:
+int main()
+{
+int n,count=0;
+printf("Enter your number ");
+scanf("%d",&n);
+while(n!=0)
+{
+n/=10;
+count++;
+}
+printf("%d",count);
+}
+
+sol 8:
+
+int main()
+{
+int n,i;
+printf("Enter your number ");
+scanf("%d",&n);
+for(i=2;i<n;i++)
+{
+if(n%i==0)
+break;
+}
+if(n==i)
+printf("Prime");
+else
+printf("Not -Prime");
+}
+
+sol 9
+
+int main()
+{
+int x,y,z;
+printf("Enter your two numbers ");
+scanf("%d %d",&x,&y);
+for(z=x>y?y:x;;z++)
+if(z%x==0 && z%y==0)
+break;
+printf("%d",z);
+}
+
+sol 10
+int main()
+{
+int num,r=0;
+printf("Enter your number :");
+scanf("%d",&num);
+while(num>0)
+{
+r+=num%10;
+num/=10;
+r*=10;
+}
+r/=10;
+printf("%d",r);
+}
