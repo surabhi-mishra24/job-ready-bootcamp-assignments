@@ -1,0 +1,189 @@
+//////////assignment 1
+
+sol 1:
+
+int main()
+{
+int x,y;
+printf("Enter a number \t");
+scanf("%d",&x);
+u=x%10;
+printf("Unit digit of given no %d is %d ",x,u);
+return 0;
+}
+---------------
+sol 2:
+
+int main()
+{
+int x;
+printf("Enter any number \t");
+scanf("%d",&x);
+printf("Given no %d without last digit is %d",x,x/10);
+return 0;
+}
+---------------
+sol 3:
+
+int main()
+{
+int a=4,b=5,c;
+printf("Before Swapping a=%d ,b=%d",a,b);
+c=a;
+a=b;
+b=c;
+printf("After swapping a=%d ,b=%d",a,b);
+return 0;
+}
+
+------------
+
+sol 4:
+int main()
+{
+int a=4,b=5;
+printf("Before Swapping a=%d ,b=%d",a,b);
+a=a+b;
+b=a-b;
+a=a-b;
+printf("After Swapping a=%d ,b=%d",a,b);
+return 0;
+}
+
+---------------
+sol 5:
+int main()
+{
+int num ,sum=0,r;
+printf("Enter three digit number \t");
+scanf("%d",&num);
+while(num!=0)
+{
+r=num%10;
+sum+=r;
+num=num/10;
+}
+printf("Sum of digits is %d",sum);
+return 0;
+} 
+
+------------
+sol 6:
+
+int main()
+{
+char ch;
+printf("Enter any character :");
+scanf("%c",&ch);
+printf("%c is %d",ch,ch);
+return 0;
+}
+
+------------------
+
+sol 7:
+
+int main()
+{
+int num ,x,count ,pow=1,r;
+printf("Enter your number :");
+scanf("%d",&num);
+x=num;
+count=0;
+while(x)
+{
+r=x%2;
+if(r==1)
+break;
+x/=2;
+count++;
+}
+if(x==num)
+printf("1");
+if(x!=num)
+for(int i=0;i<count;i++)
+pow*=2;
+printf("%d",pow);
+return 0;
+}
+
+-----------------
+
+sol 8
+
+int main()
+{
+int num;
+printf("Enter your number :");
+scanf("%d",&num);
+if((num&1)==0)
+printf("Even");
+else
+printf("Odd");
+return 0;
+}
+
+----------------
+
+sol 9
+int main()
+{
+int a;
+float b;
+char c;
+double d;
+printf("Size of int =%d \n Size of float =%d\nSize of char =%d \n Size of double =%d ",sizeof(a),sizeof(b),sizeof(c),sizeof(d));
+return 0;
+}
+
+--------------------
+sol 10
+int main()
+{
+int num;
+printf("Enter your number :");
+scanf("%d",&num);
+num/=10;
+num*=10;
+printf("%d",num);
+return 0;
+}
+
+-----------------------
+sol 11
+int main()
+{
+int num ,digit;
+printf("Enter number and digit");
+scanf("%d %d",&num,&digit);
+num*=10;
+num+=digit;
+printf("Resulting number %d",num);
+return 0;
+}
+
+--------------
+sol 12
+int main()
+{
+int INR;
+float USD;
+printf("Enter INR amount ");
+scanf("%d",&INR);
+USD=INR/76.23;
+printf("IN USD=%f",USD);
+return 0;
+}
+
+-----------------
+
+sol 13
+int main ()
+{
+int num;
+printf("Enter three digit number ");
+scanf("%d",&num);
+num=(num>>1);
+print("%d",num);
+return 0;
+}
