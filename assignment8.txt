@@ -1,0 +1,402 @@
+sol 1:
+
+int main()
+{
+for(int i=1;i<=5;i++)
+{
+for(int j=1;j<=5;j++)
+{
+if(j<=i)
+printf("*");
+else
+printf(" ");
+}
+printf("\n");
+}
+}
+
+sol 2:
+
+int main()
+{
+for(int i=1;i<=5;i++)
+{
+for(int j=1;j<=5;j++)
+{
+if(j>=6-i)
+printf("*");
+else
+printf(" ");
+}
+printf("\n");
+}
+}
+
+sol 3:
+
+int main()
+{
+for(int i=1;i<=5;i++)
+{
+for(int j=1;j<=5;j++)
+{
+if(j<=6-i)
+printf("*");
+else
+printf(" ");
+}
+printf("\n");
+}
+}
+
+sol 4:
+int main()
+{
+for(int i=1;i<=5;i++)
+{
+for(int j=1;j<=5;j++)
+{
+if(j>=i)
+printf("*");
+else
+printf(" ");
+}
+printf("\n");
+}
+}
+
+sol 5:
+
+int main()
+{
+for(int i=1;i<=5;i++)
+{
+for(int j=1;j<=9;j++)
+{
+if(j>=6-i&&j<=4+i)
+printf("*");
+else
+printf(" ");
+}
+printf("\n");
+}
+}
+
+sol 6
+int main()
+{
+for(int i=1;i<=5;i++)
+{
+for(int j=1;j<=9;j++)
+{
+if(j>=i&&j<=10-i)
+printf("*");
+else
+printf(" ");
+}
+printf("\n");
+}
+}
+
+sol 7
+int main()
+{
+for(int i=1;i<=5;i++)
+{
+for(int j=1;j<=9;j++)
+{
+if(j<=6-i||j>=4+i)
+printf("*");
+else
+printf(" ");
+}
+printf("\n");
+}
+}
+
+sol 8:
+int main()
+{
+int i,j,n;
+for(i=1;i<=4;i++)
+{
+n=1;
+for(j=1;j<=7;j++)
+{
+if(j>=5-i && j<=i+3)
+{
+ printf("%d",n);
+ if(j>=4)
+ n--;
+ if(j<4)
+ n++;
+}
+else
+printf(" ");
+}
+printf("\n");
+}
+}
+
+sol 9:
+
+int main()
+{
+int i,j,n;
+for(i=1;i<=4;i++)
+{
+n=1;
+for(j=1;j<=7;j++)
+{
+if(j>=i && j<=8-i)
+{
+ printf("%d",n);
+ if(j>=4)
+ n--;
+ if(j<4)
+ n++;
+}
+else
+printf(" ");
+}
+printf("\n");
+}
+}
+
+sol 10:
+int main()
+{
+int i,j,n;
+for(i=1;i<=4;i++)
+{
+n=1;
+for(j=1;j<=7;j++)
+{
+if(j<=5-i && j>=i+3)
+{
+ printf("%d",n);
+ if(j<5-i)
+ n++;
+ if(j>4 || j==4)
+ n--;
+}
+else
+printf(" ");
+}
+printf("\n");
+}
+}
+
+sol 11:
+int main()
+{
+int i,j;
+char a='A';
+for(i=1;i<=5;i++)
+{a='A';
+for(j=1;j<=9;j++)
+{
+if(j>=6-i && j<=4+i)
+{
+printf("%c",a);
+if(j<5)
+a++;
+if(j>5 || j==5)
+a--;
+}
+else
+printf(" ");
+}
+printf("\n");
+}
+} 
+
+sol 12:
+
+int main()
+{
+int i,j;
+char a='A';
+for(i=1;i<=4;i++)
+{a='A';
+for(j=1;j<=7;j++)
+{
+if(j>=i && j<=8-i)
+{
+printf("%c",a);
+if(j<4)
+a++;
+if(j>4 || j==4)
+a--;
+}
+else
+printf(" ");
+}
+printf("\n");
+}
+}
+
+sol 13:
+ int main()
+{
+int i,j;
+char a='A';
+for(i=1;i<=7;i++)
+{a='A';
+for(j=1;j<=13;j++)
+{
+if(j<=8-i || j>=6+i)
+{
+printf("%c",a);
+if(j<8-i)
+a++;
+if(j>8-i || j==7)
+a--;
+}
+else
+printf(" ");
+}
+printf("\n");
+}
+}
+
+sol 14:
+int main()
+{
+int i,j;
+for(i=i;i<=5;i++)
+{
+for(j=1;j<=5;j++)
+{
+if(j==1 || j==i|| i==5)
+printf("*");
+else
+printf(" ");
+}
+printf("\n");
+}
+}
+
+
+sol 15:
+int main()
+{
+int i,j;
+for(i=i;i<=5;i++)
+{
+for(j=1;j<=5;j++)
+{
+if(j==5 || j==6-i|| i==5)
+printf("*");
+else
+printf(" ");
+}
+printf("\n");
+}
+}
+
+sol 16
+ int main()
+{
+int i,j;
+for(i=i;i<=5;i++)
+{
+for(j=1;j<=5;j++)
+{
+if(j==4+i || j==6-i|| i==5)
+printf("*");
+else
+printf(" ");
+}
+printf("\n");
+}
+}
+
+sol 17
+int main()
+{
+int i,j;
+for(i=i;i<=5;i++)
+{
+for(j=1;j<=9;j++)
+{
+if(j==1 || j==i|| j==10-i)
+printf("*");
+else
+printf(" ");
+}
+printf("\n");
+}
+}
+
+sol 18:
+int main()
+{
+for(int i=1;i<=9;i++)
+{
+for(int j=1;j<=9;j++)
+{
+if(j<=5)
+{
+if(j<=6-i && j>=i+4)
+printf("*");
+else 
+printf("  ");
+}
+if(j>5)
+{
+if(j>6=6-i && j<=14-i)
+printf("*");
+else
+printf(" ");
+}
+}
+printf("\n");
+}
+}
+
+sol 19:
+//heart printing with name
+int main()
+{
+for(int i=1;i<=13;i++)
+{
+for(int j=1;j<=19;j++)
+{
+if(i<=3)
+{
+if((j>=4-i && j<=6+i)|| (j>=14-i && j<=16+i))
+printf("*");
+else
+printf(" ");
+}
+if(i==4)
+{
+if((j>=5-i && j<=3+i)|| (j>=9+i && j<=15+i))
+printf("*");
+if( j==7)
+printf("M");
+if( j==8)
+printf("y");
+if( j==9)
+printf("S");
+if( j==10)
+printf("i");
+if( j==11)
+printf("r");
+if( j==12)
+printf("G");
+
+}
+if(i>4)
+{
+if(j>=i-3 && j<=24-i)
+printf("*");
+else
+printf(" ");
+}
+
+}
+printf("\n");
+}
+}
