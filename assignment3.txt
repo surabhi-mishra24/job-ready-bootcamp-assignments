@@ -1,0 +1,298 @@
+Assignment 3
+------------
+sol 1:
+ int main()
+{
+int num;
+printf("Enter a number :");
+scanf("%d",&num);
+if(num>0)
+printf("positive");
+else
+printf("non - positive");
+return 0;
+}
+
+-------------
+
+sol 2:
+
+int main()
+{
+int num;
+printf("Enter a number :");
+scanf("%d",&num);
+if(num%5==0)
+printf("Divisible by 5");
+else
+printf("Not -Divisible by 5");
+return 0;
+}
+
+--------------
+sol 3:
+
+int main()
+{
+int num;
+printf("Enter a number :");
+scanf("%d",&num);
+if(num%2==0)
+printf("Even");
+else
+printf("Odd");
+return 0;
+}
+
+--------------
+sol 4:
+int main()
+{
+int num;
+printf("Enter a number :");
+scanf("%d",&num);
+if((num/2)*2==num)
+printf("Even");
+else
+printf("Odd");
+return 0;
+}
+--------------
+sol 5:
+
+int main()
+{
+int num;
+printf("Enter a number :");
+scanf("%d",&num);
+if(num>=100&&num<=999)
+printf(""Three digit number);
+else
+printf("not a three digit number");
+return 0;
+}
+
+-----------
+sol 6:
+
+int main()
+{
+int a,b;
+printf("Enter two numbers");
+scanf("%d %d",&a,&b);
+if(a>=b)
+printf("%d",a);
+else 
+printf("%d",b);
+return 0
+}
+
+------------
+sol 7:
+
+int main()
+{
+int a,b,c,d;
+printf("Enter values of coefficient of x^2,x,consatant");
+scanf("%d %d %d",&a,&b,&c);
+d=(b*b)-(4*a*c);
+if(d>0)
+printf("Real  and Distinct root");
+if(d==0)
+printf("Real and Equal");
+if(d<0)
+printf("Imaginery roots");
+return 0;
+}
+
+------------
+sol 8:
+
+
+int main()
+{
+int year;
+printf("enter your year");
+scanf("%d", &year);
+if(year%4)
+  printf("leap year");
+  if(year%100)
+  {
+    if(year%400)
+      printf("leap year");
+    
+    else
+       printf("not a leap year");
+   }
+else 
+printf("not a leap year");
+
+}
+
+
+--------------
+sol 9:
+
+int main()
+{
+ int a,b,c;
+printf("Enter three numbers :");
+scanf("%d %d %d",&a,&b,&c);
+printf("%d",a>b?a>c?a:c:b>c?b:c);
+return 0;
+}
+
+----------------
+sol 10
+int main()
+{
+int cp,sp;
+float store;
+printf("Enter cp of product and sp of it ");
+scanf(" %d %d",&cp,&sp);
+if(sp>cp)
+{
+    store=sp-cp;
+printf("profit percentage %f",(store/cp)*100.0);
+
+}
+
+else
+{
+    store=cp-sp;
+printf(" loss percentage %f",(store/cp)*100.0);
+
+}
+}
+
+
+-------------
+
+sol 11:
+int main()
+{
+int a,b,c,d,e;
+printf("enter marks of five subjects ");
+scanf("%d %d %d %d %d",&a,&b,&c,&d,&e);
+if(a>=33 && b>=33 && c>=33 && d>=33 && e>=33)
+printf("pass");
+else
+printf("fail");
+}
+
+----------------
+
+sol 12:
+int main()
+{
+char ch;
+printf("Enter any character ");
+scanf("%c",&ch);
+if(ch>='A' && ch <='Z')
+printf("Uppercase");
+if(ch>='a' && ch <='z')
+printf("lowercase");
+}
+
+-------------
+
+sol 13:
+int main()
+{
+int num;
+printf("Enter your number ");
+scanf("%d",&num);
+if(num%2==0 && num%3==0)
+printf("Divisible by 2 and 3");
+else
+printf("Not Divisible by 2 and 3");
+}
+
+-----------------
+sol 14:
+int main()
+{
+int num;
+printf("Enter your number ");
+scanf("%d",&num);
+if(num%7==0 && num%3==0)
+printf("Divisible by 7and 3");
+else
+printf("Not Divisible by 7and 3");
+}
+
+------------
+sol 15 :
+int main()
+{
+int num;
+printf("Enter your number ");
+scanf("%d",&num);
+if(num>0)
+printf("positive");
+else if(num==0)
+printf("Zero");
+else
+printf("negative");
+}
+
+------------
+sol 16:
+int main()
+{
+char ch ;
+printf("Enter a character ");
+scanf("%c",&ch);
+if(ch>='A' && ch <='Z')
+printf("Uppercase");
+if(ch>='a' && ch <='z')
+printf("lowercase");
+if(ch>='0' && ch <='9')
+printf("digit");
+if((ch>=32 && ch<=47) ||(ch>=58 && ch<=64)||(ch>=91 && ch<=96)||(ch>=123 && ch<=126))
+printf("special character");
+}
+
+
+------------
+
+sol 17
+
+int main()
+{
+int a,b,c;
+printf("Enter sides of triangles ");
+scanf("%d %d %d",&a,&b,&c);
+if((a+b)>c && (a+c)>b && (b+c)>a)
+printf("Valid triangle");
+else
+printf("Invalid Triangle");
+}
+
+----------
+
+sol 18
+ int main()
+{
+int month;
+printf("Enter your month number ");
+scanf("%d",&month);
+if(month<8)
+{
+if(month%2==0)
+{   if(month==2)
+    printf("28");
+   else
+    printf("30");
+}
+if(month%2!=0)
+    printf("31");
+}
+if(month>=8 )
+{
+if(month%2==0)
+printf("31");
+else
+printf("30");
+}
+}
