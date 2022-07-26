@@ -1,0 +1,188 @@
+assignment 7------------
+sol 1
+int main()
+{
+int a=-1,b=1,c,n;
+printf("Enter value of n ");
+scanf("%d",&n);
+for(int i=1;i<=n;i++)
+{
+c=a+b;
+a=b;
+b=c;
+}
+printf("%d",c);
+}
+
+-----------------
+sol 2
+int main()
+{
+int a=-1,b=1,c,n;
+printf("Enter value of n ");
+scanf("%d",&n);
+for(int i=1;i<=n;i++)
+{
+c=a+b;
+a=b;
+b=c;
+printf("%d is %d \t",i,c);
+}
+}
+----------
+sol 3 
+int main()
+{
+int a=-1,b=1,c,n;
+printf("Enter value of n ");
+scanf("%d",&n);
+for(int i=1;i<=n;i++)
+{
+c=a+b;
+if(i==n)
+break;
+a=b;
+b=c;
+}
+if(n==i)
+printf("It is an element ");
+else 
+printf("It is not an element ");
+}
+-----------------
+sol 4:
+int main()
+{
+    int a,b,c,d,r,div;
+    printf("Enter two numbers :");
+    scanf("%d %d",&a,&b);
+    c=a>b?a:b;
+    d=a>b?b:a;
+    r=c%d;
+    while(r!=0)
+    {
+        c=d;
+        d=r;
+        r=c%d;
+    }
+    printf("HCF is %d and %d is %d",a,b,d);
+    return 0;
+}
+ 
+
+sol 5
+
+int main()
+{
+int a,b,c,i;
+printf("Enter two numbers :");
+scanf("%d %d",&a,&b);
+c=a>b?b:a;
+for(i=2;i<c;i++)
+{
+    if((a%i==0)&&(b%i==0))
+        break;
+}
+if(i!=c)
+    printf("not coprime");
+else
+    printf("coprime");
+return 0;
+}
+
+
+-----------
+sol 6
+int main()
+{
+    int i,j;
+    for(i=2;i<=100;i++)
+    {
+        for(j=2;j<i;j++)
+        {
+            if(i%j==0)
+                break;
+        }
+        if(i==j)
+            printf("%d \t",i);
+    }
+}
+
+--------------
+sol 7
+int main()
+{
+    int i,j,a,b;
+    printf("Enter two numbers :");
+    scanf("%d %d",&a,&b);
+
+    for(i=a;i<=b;i++)
+    {
+        for(j=2;j<i;j++)
+        {
+            if(i%j==0)
+                break;
+        }
+        if(i==j)
+            printf("%d \t",i);
+    }
+}
+
+-----------------
+sol 8
+int main()
+{
+    int i,j,a,b;
+    printf("Enter two numbers :");
+    scanf("%d %d",&a,&b);
+
+    for(i=a;i<=b;i++)
+    {
+        for(j=2;j<i;j++)
+        {
+            if(i%j==0)
+                break;
+        }
+        if(i==j)
+            printf("%d \t",i);
+    }
+}
+
+--------------
+sol 9
+int main()
+{
+    int num,x,rem,sum=0;
+    printf("Enter your number ");
+    scanf("%d",&num);
+    x=num;
+    while(x)
+    {
+        rem=x%10;
+        sum+=rem*rem*rem;
+        x/=10;
+    }
+    if(num==sum)
+        printf("Armstrong");
+    else
+        printf("Not a Armstrong");
+}
+
+------------
+sol 10
+int main()
+{
+    int i,j,sum,rem;
+    for(i=1;i<=1000;i++)
+    {
+        sum=0;
+        for(j=i;j!=0;j/=10)
+        {
+            rem=j%10;
+            sum+=rem*rem*rem;
+        }
+        if(i==sum)
+            printf("%d is Armstrong no \t ",i);
+    }
+}
+
