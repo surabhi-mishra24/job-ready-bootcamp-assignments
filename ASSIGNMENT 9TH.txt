@@ -1,0 +1,360 @@
+ASSIGNMENT 9TH
+
+SOL 1
+
+    int main()
+{
+int x;
+printf("Enter month number :");
+scanf("%d",&x);
+switch(x)
+{
+case 1:
+    printf("Jannuary has 31 days");
+    break;
+
+case 2:
+    printf("Febuary has 28 days");
+    break;
+
+case 3:
+    printf("March has 31 days");
+    break;
+
+case 4:
+    printf("April has 30 days");
+    break;
+
+case 5:
+    printf("May has 31 days");
+    break;
+
+case 6:
+    printf("June has 30 days");
+    break;
+
+case 7:
+    printf("July has 31 days");
+    break;
+
+case 8:
+    printf("August has 31 days");
+    break;
+
+case 9:
+    printf("September has 30 days");
+    break;
+
+case 10:
+    printf("October has 31 days");
+    break;
+
+case 11:
+    printf("November has 30 days");
+    break;
+
+case 12:
+    printf("December has 31 days");
+    break;
+
+    default:
+    printf("Invalid number ");
+    break;
+}
+}
+
+    
+
+SOL 2
+int main()
+{
+    int x,y,a;
+    printf("1.Addition \n 2.Subtraction \n 3.Multiplication \n 4.Divison \n.5.Exit");
+    printf("Enter your choice :");
+    scanf("%d",&a);
+    switch(a)
+    {
+    case 1:
+        printf("Enter two number ");
+        scanf("%d %d",&x,&y);
+        printf("Addition is %d",x+y);
+        break;
+         case 2:
+        printf("Enter two number ");
+        scanf("%d %d",&x,&y);
+        printf("Subtraction is %d",x-y);
+        break;
+         case 3:
+        printf("Enter two number ");
+        scanf("%d %d",&x,&y);
+        printf("Multiplication is %d",x*y);
+        break;
+         case 4:
+        printf("Enter two number ");
+        scanf("%d %d",&x,&y);
+        printf("Division is %d",x/y);
+        break;
+         case 5:
+            exit(0);
+    }
+}
+
+
+SOL 3
+
+int main()
+{
+    int x;
+    printf("Enter week day number :");
+scanf("%d",&x);
+switch(x)
+{
+case 1:
+    printf("Wishing you wealth and good health, have a great day.");
+    break;
+case 2:
+    printf("Reminder: It's you and you are unique. Have a great day!");
+    break;
+case 3:
+    printf("Learn new things everyday. Enjoy each day to the fullest and make memories for life. Have a great day.");
+    break;
+case 4:
+    printf("Have a great day! This is my wish for you today.");
+    break;
+case 5:
+    printf("A new day, a new life, a new journey unfolds. Have a beautiful day my friend.");
+    break;
+case 6:
+    printf("Wishing a lovely day to a lovely person. Have a wonderful day ahead, my sweetheart");
+    break;
+case 7:
+    printf("Always have a positive attitude and be happy. Have a great day.");
+    break;
+default :
+    printf("Ananomus input");
+    break;
+
+}
+}
+
+SOL 4
+
+int main()
+{
+    int x,y,z,a;
+    printf("1.isosceles triangle or not \n2.right angled triangle or not\n 3.equilateral triangle or not \n4.Exit\n");
+    printf("Enter your choice ");
+    scanf("%d",&a);
+    switch(a)
+    {
+    case 1:
+        printf("Enter value of Triangle sides ");
+        scanf("%d %d %d",&x,&y,&z);
+          if(x==y||y==z|x==z)
+          printf("isosceles triangle");
+        else
+          printf("Not a isosceles triangle");
+          break;
+    case 2:
+        printf("Enter value of Triangle sides ");
+        scanf("%d %d %d",&x,&y,&z);
+        if(x*x==y*y+z*z||y*y==x*x+z*z||z*z==x*x+y*y)
+         printf("Right angled triangle");
+        else
+         printf("Not a Right Angled Triangle");
+          break;
+
+    case 3:
+        printf("Enter value of Triangle sides ");
+        scanf("%d %d %d",&x,&y,&z);
+        if(x==y==z)
+        printf("Equilateral triangle");
+        else
+            printf("Not a Equilateral triangle ");
+                      break;
+
+        case 4:
+            exit(0);
+    }
+}
+
+SOL 5
+    int main()
+{
+    int a;
+    printf("Enter a number ");
+    scanf("%d",&a);
+    switch(a)
+    {
+    case 1:
+        printf("good");
+        break;
+
+    case 2:
+        printf("better");
+        break;
+
+    case 3:
+        printf("best");
+        break;
+
+    default:
+        printf("Invalid");
+        break;
+
+
+    }
+}
+
+    
+
+
+
+SOL 6
+int main()
+{
+int a;
+printf("Enter your year");
+scanf("%d",&a);
+switch(a%4)
+{
+case 0:
+    printf("Leap year");
+    break;
+default:
+    switch(a%100)
+    {
+    case 0:
+        switch(a%400)
+        {
+        case 0:
+            printf("leap year");
+            break;
+            default :
+                printf("not a leap year");
+                break;
+        }
+    }
+     printf("not a leap year");
+                break;
+}
+}
+
+
+SOL 7
+
+    int main()
+{
+    int unit;
+    float bill,subcharge,total;
+    printf("Enter your bill unit charge");
+    scanf("%d",&unit);
+      switch(unit)
+      {
+      case 0 ... 50:
+          bill=0.50*unit;
+
+        break;
+
+        case 51 ... 150:
+        bill=25+0.75*(unit-50);
+
+        break;
+
+        case 151 ... 250:
+     bill=100+1.20*(unit-150);
+
+        break;
+        default :
+    bill=220+1.50*(unit-250);
+
+        break;
+      }
+      subcharge=bill*0.20;
+          total =bill+subcharge;
+        printf("%.2f",total);
+}
+
+
+
+
+SOL 8
+
+    
+int main()
+{
+    int num;
+    printf("Enter your number :");
+    scanf("%d",&num);
+    switch(num>0)
+    {
+    case 1:
+        num*=-1;
+        printf("%d",num);
+        break;
+    case 0:
+        printf("%d",num);
+        break;
+    }
+}
+
+    
+
+SOL 9
+
+    
+int main()
+{
+    int num;
+    printf("Enter your number :");
+    scanf("%d",&num);
+    switch(num%2==0)
+    {
+
+        //even
+    case 1:
+        num+=1;
+        printf("%d",num);
+        break;
+
+        //odd
+ case 0:
+       
+        printf("%d",num);
+        break;
+    }
+}
+
+    
+
+SOL 10
+
+#include<math.h>
+int main()
+{
+    int a,b,c;
+    float D;
+    printf("Enter value of a,b,and c ");
+    scanf("%d %d %d",&a,&b,&c);
+    D=b*b-(4.0*a*c);
+    switch(D>0)
+    {
+    case 1:
+
+        printf("Roots are  REAL AND DIFFERENT %.2f and %.2f",(-b+sqrt(D))/(2.0*a),(-b-sqrt(D))/(2.0*a));
+        break;
+    case 0:
+        switch(D==0)
+        {
+       case 1:
+        printf("Roots are REAL AND SAME  %.2f and %.2f ",-b/(2.0*a),-b/(2.0*a));
+        break;
+
+        case 0:
+         D=4*a*c-b*b;
+         printf("Roots are IMAGINARY  %.2f and %.2f",(-b+sqrt(D))/(2.0*a),(-b-sqrt(D))/(2.0*a));
+         break;
+         }
+
+      }
+}
