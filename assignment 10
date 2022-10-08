@@ -1,0 +1,182 @@
+//1. Write a function to calculate the area of a circle.
+float area (int);
+int main()
+{
+    int r;
+    float ar;
+    printf("Enter radius of circle ");
+    scanf("%d",&r);
+    ar=area(r);
+    printf("%.2f",ar);
+}
+float area (int a)
+{
+    float area;
+    area=3.14*a*a;
+    return area;
+}
+
+//2. Write a function to calculate simple interest.
+float simint (int,int ,int);
+int main()
+{
+    int p,r,t;
+    float si;
+    printf("Enter your principle amount,rate of interest and time period");
+    scanf("%d %d %d",&p,&r,&t);
+    si=simint(p,r,t);
+    printf("%.2f",si);
+}
+float simint (int a,int b,int c)
+{
+    float siin;
+    siin=(a*b*c)/100;
+    return siin;
+}
+
+//3.Write a function to check whether a given number is even or odd. Return 1 if thenumber is even, otherwise return 0. (TSRS)
+int evenodd (int);
+int main( )
+{
+    int num,i;
+    printf("Enter your number");
+    scanf("%d",&num);
+    i=evenodd(num);
+    printf("if i==0 then odd and if i==1 then even \n your i is %d",i);
+
+}
+int evenodd(int n)
+{
+    int r;
+    if(r%2==0)
+        return 1;
+    else
+        return 0;
+}
+
+
+//4. Write a function to print first N natural numbers (TSRN)
+void natural (int);
+int main()
+{
+    int x;
+printf("enter value of natural number");
+scanf("%d",&x);
+natural(x);
+}
+void natural (int a)
+{
+    for(int i=1;i<=a;i++)
+        printf("%d ",i);
+
+}
+
+//5. Write a function to print first N odd natural numbers. (TSRN)
+void oddnatural (int);
+int main()
+{
+    int n;
+    printf("enter number of odd number ");
+    scanf("%d",&n);
+    oddnatural(n);
+}
+void oddnatural(int x)
+{
+for(int i=1;i<=x;i++)
+    printf("%d ",2*i-1);
+}
+
+//6. Write a function to calculate the factorial of a number. (TSRS)
+int fat (int);
+int main()
+{
+    int i,f;
+    printf("Enter your factor number");
+    scanf("%d",&i);
+    f=fat(i);
+    printf("%d",f);
+}
+int fat (int a)
+{
+    int at=1;
+    for(int i=1;i<=a;i++)
+    at*=i;
+    return at;
+}
+
+//7. Write a function to calculate the number of combinations one can make from n itemsand r selected at a time. (TSRS)
+int com (int ,int);
+int fat (int);
+int main()
+{
+    int r,n,comb=0;
+
+    printf("Enter toatal number of items and selected items ");
+    scanf("%d %d",&r,&n);
+    comb=com(r,n);
+    printf("Total number of combinaiton is %d",comb);
+}
+
+int com(int a,int b)
+{
+    int c;
+    c= fat(a)/(fat(b)*fat(a-b));
+    return c;
+}
+int fat (int a)
+{
+    int at=1;
+    for(int i=1;i<=a;i++)
+    at*=i;
+    return at;
+}
+
+
+
+//8. Write a function to calculate the number of arrangements one can make from n items and r selected at a time. (TSRS)
+int arr (int ,int);
+int fat (int);
+int main()
+{
+    int r,n,arra=0;
+
+    printf("Enter toatal number of items and selected items ");
+    scanf("%d %d",&r,&n);
+    arra=arr(r,n);
+    printf("Total number of arrangement is %d",arra);
+}
+
+int arr(int a,int b)
+{
+    int c;
+    c= fat(a)/fat(a-b);
+    return c;
+}
+int fat (int a)
+{
+    int at=1;
+    for(int i=1;i<=a;i++)
+    at*=i;
+    return at;
+}
+
+//9. Write a function to check whether a given number contains a given digit or not.(TSRS)
+int check (int ,int);
+int check (int n,int d)
+{
+    int a=0;
+    for(int i=n;i!=0;i/=10)
+        if(i%10==d)
+            a++;
+
+        return a;
+}
+int main()
+{
+    int num,digit,out;
+    printf("Enter your number and digit ");
+    scanf("%d %d",&num,&digit);
+    out=check(num,digit);
+    printf("if digit is there in number the output will more then 0 else 0 \n Output =%d",out);
+}
+
