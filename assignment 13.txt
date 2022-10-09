@@ -1,0 +1,92 @@
+1. Write a recursive function to calculate sum of first N natural numbers
+
+int nat (int n)
+{
+if(n==0||n==1)
+return 1;
+return nat(n-1)+n;
+}
+
+2. Write a recursive function to calculate sum of first N odd natural numbers
+
+int odd_nat (int n)
+{
+if(n==1)
+return 1;
+return odd_nat(n-1)+(2*n-1);
+}
+
+3. Write a recursive function to calculate sum of first N odd natural numbers
+int even_nat (int n)
+{
+if(n==1)
+return 2;
+return even_nat(n-1)+(2*n);
+}
+4. Write a recursive function to calculate sum of squares of first n natural numbers
+
+int sum_square (int n)
+{
+if(n==1)
+return 1;
+return sum_square(n-1)+(n*n);
+}
+
+5. Write a recursive function to calculate sum of digits of a given number
+
+int sum_digit (int n)
+{
+if(n==0)
+return n;
+return sum_digit(n/10)+(n%10);
+}
+
+
+6. Write a recursive function to calculate factorial of a given number
+
+int fact (int n)
+{
+if(n==1)
+return 1;
+return fact(n-1)*n;
+}
+
+7. Write a recursive function to calculate HCF of two numbers
+
+int hcf(int x,int y)
+{
+if(y%x==0)
+return x;
+if(y%x!=0)
+hcf(y%x,x);
+}
+8. Write a recursive function to print first N terms of Fibonacci series
+
+void fibo(int n)
+{
+if(n==1)
+printf("0 ");
+if(n==2)
+printf("1 ");
+if(n>2)
+printf("%d ",fib(n-1)+fib(n-2));
+}
+
+
+9. Write a program in C to count the digits of a given number using recursion.
+ 
+int count (int n)
+{
+if(n<10&&n>=0)
+return 1;
+return count(n/10)+1;
+}
+
+10. Write a program in C to calculate the power of any number using recursion.
+ 
+int pow(int n,int x)
+{
+if(x==0)
+return 1;
+return pow(n,x-1)*n;
+}
