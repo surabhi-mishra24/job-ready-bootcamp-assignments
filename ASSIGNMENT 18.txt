@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+
+    char st[30]="hello world what'sup all good.";
+     repeat(st);
+}
+void repeat (char ch[])
+{
+       int fre[150]={0};
+    int i;
+       for(i=0;ch[i];i++)
+    {
+        fre[ch[i]]++;
+    }
+    for(i=0;i<150;i++)
+    {
+        if(fre[i]!=0)
+            printf("%d and %c\n",fre[i],i);
+    }
+}
