@@ -181,12 +181,16 @@ return 0;
 -----------------
 
 sol 13
+#include<stdio.h>
 int main ()
 {
-int num;
+int num,t1=100,r;
 printf("Enter three digit number ");
 scanf("%d",&num);
-num=(num>>1);
-print("%d",num);
+r=num%10;
+t1*=r;
+num=num/10;
+num=t1+num;
+printf("%d",num);
 return 0;
 }
