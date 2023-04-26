@@ -1,16 +1,134 @@
 1. Write a function to find the greatest number from the given array of any size. (TSRS)
 
+int great(int [],int );
+int great (int a[],int n){
+    int sin=a[0];
+    for(int i=1;i<n;i++){
+        if(a[i]>sin)
+        sin=a[i];
+    }
+    return sin;
+}
 
 2. Write a function to find the smallest number from the given array of any size. (TSRS)
+
+int small(int [],int );
+int small (int a[],int n){
+    int sin=a[0];
+    for(int i=1;i<n;i++){
+        if(a[i]<sin)
+        sin=a[i];
+    }
+    return sin;
+}
+
 3. Write a function to sort an array of any size. (TSRS)
+
+void sort(int [],int );
+void sort(int a[],int n)
+{
+   int swap;
+   for(int i=0;i<n-1;i++) 
+   {
+    for(int j=i+1;j<n;j++)
+     {
+       if(a[i]>a[j])
+         {
+          swap=a[i];
+          a[i]=a[j];
+          a[j]=swap;
+           }
+      } 
+    }
+}
+
 4. Write a function to rotate an array by n position in d direction. The d is an indicative
 value for left or right. (For example, if array of size 5 is [32, 29, 40, 12, 70]; n is 2 and
 d is left, then the resulting array after left rotation 2 times is [40, 12, 70, 32, 29] )
+
+void rotate(int a[], int n, int pos, int sign)
+{
+    int num;
+    pos = pos % n;
+
+    if (sign == 1)
+    {
+        while (pos)
+        {
+            num = a[n - 1];
+            for (int i = n - 1; i >= 1; i--)
+            {
+                a[i] = a[i - 1];
+            }
+            a[0] = num;
+            pos--;
+        }
+    }
+    if (sign == -1)
+    {
+        while (pos)
+        {
+            num = a[0];
+            for (int i = 0; i < n; i++)
+            {
+
+                a[i] = a[i + 1];
+            }
+            a[n - 1] = num;
+            pos--;
+        }
+    }
+}
+
 5. Write a function to find the first occurrence of adjacent duplicate values in the array.
 Function has to return the value of the element.
+
+
+int  adjacent(int arr[],int n){
+int max=arr[0];
+int index=-1;
+for (int  i = 1; i < n; i++)
+{
+  if(arr[i]>max)
+  max=arr[i]; 
+}
+int hash[max+1]={0};
+
+for(int i=0;i<n;i++)
+hash[arr[i]]++;
+
+for(int i=0;i<n;i++){
+    if(hash[arr[i]]>1)
+    {
+        index=arr[i];
+        break;
+    }
+
+}
+
+if(index==-1)
+return -1;
+else
+return index;
+}
+ 
 6. Write a function in C to read n number of values in an array and display it in reverse
 order.
+
+void display_and_get(void){
+int a[100],n;
+printf("Enter number of values in a array");
+scanf("%d",&n);
+for (int i=0;i<n;i++)
+scanf("%d",&a[i]);
+for(int i=n-1;i>=0;i--)
+printf("%d ",&a[i]);
+}
+
 7. Write a function in C to count a total number of duplicate elements in an array.
+
+
+
 8. Write a function in C to print all unique elements in an array.
 9. Write a function in C to merge two arrays of the same size sorted in descending
 order.
