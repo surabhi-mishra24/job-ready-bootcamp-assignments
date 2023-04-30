@@ -161,12 +161,25 @@ for(int j=i;j<n;j++){
 printf("%s",s);
 }
 
-10. Write a program in C to Find the Frequency of Characters.
+//10. Write a program in C to Find the Frequency of Characters.
 
 #include<stdio.h>
 int main(){
-char s[20];
+char s[20],fr[256]={0};
+int i;
 printf("Enter your string");
-
-
+gets(s);
+for( i=0;s[i];i++)
+{
+    fr[s[i]]++;
 }
+for(i=65;i<=90;i++){
+    if(fr[i]>0)
+    printf("%c is %d \n",i,fr[i]);
+}
+for(i=97;i<=122;i++){
+    if(fr[i]>0)
+    printf("%c is %d \n",i,fr[i]);
+}
+}
+
