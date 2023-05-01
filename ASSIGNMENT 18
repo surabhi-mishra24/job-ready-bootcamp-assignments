@@ -1,0 +1,164 @@
+1. Write a function to calculate length of the string
+
+int length(char s[]){
+for(int i=0;s[i];i++);
+return i;
+}
+
+
+2. Write a function to reverse a string.
+void reverse(char s[]){
+for(int i=0;s[i];i++);
+ n=i;
+for(int i=0;i<n/2;i++)
+{
+ch=s[t];
+s[t]=s[i];
+s[i]=ch;
+}
+}
+
+3. Write a function to compare two strings.
+
+int compare(char s[],char t[])
+{
+ int i;
+ for(i=0;s[i] == t[i];i++);
+ if(s[i]=='\0' && t[i]=='\0' )
+  printf("Equal");
+  if((s[i]-t[i])>0)
+  printf("Second string is higger");
+   if((s[i]-t[i])<0)
+  printf("first string is higger");
+  else
+  printf("both are same");
+}
+
+4. Write a function to transform string into uppercase
+
+void upper (char c[]){
+for(int i=0;c[i];i++)
+    {
+        if(c[i]>='a' && c[i]<='z')
+        {
+            c[i]-=32;
+        }
+    }
+}
+5. Write a function to transform a string into lowercase
+
+
+void lower (char c[]){
+for(int i=0;c[i];i++)
+    {
+        if(c[i]>='a' && c[i]<='z')
+        {
+            c[i]+=32;
+        }
+    }
+}
+
+6. Write a function to check whether a given string is an alphanumeric string or not.
+(Alphanumeric string must contain at least one alphabet and one digit)
+void alpha(char s[]){
+int a=0,d=0;
+for(int i=0;s[i];i++){
+if(s[i]>=0 && s[i]<=9)
+d++;
+if((s[i]>='A' && s[i]<='Z')||(s[i]>='a' && s[i]<='z'))
+a++;
+}
+
+if(a>0 &&d>0)
+printf("alphanumric string");
+else
+printf("Not alphanumric string");
+
+}
+
+
+7. Write a function to check whether a given string is palindrome or not.
+
+void palindrome(char s[]){
+for(int i=0;s[i]=='\0';i++);
+int n=i-1,t=i-1;
+
+char ch;
+for(int i=0;i<n/2;i++)
+{
+
+if(s[i]!=s[t])
+t--;
+}
+if(i==n/2)
+printf("palindrome");
+else 
+printf("not a palindrome");
+}
+
+8. Write a function to count words in a given string
+int word(char s[]){
+int count=0;
+for(int i=0;s[i];i++)
+{
+if(s[i]=' ' && ((s[i+1]>='a'&&s[i+1]<=z) || (s[i+1]>='A'&&s[i+1]<='Z')||(s[i+1]>=0 && s[i+1]<=9))|| s[i+1]=='\0')
+count++;
+}
+}
+
+9. Write a function to reverse a string word wise. (For example if the given string is
+“Mysirg Education Services” then the resulting string should be “Services Education
+Mysirg” )
+
+void reverse(char s[]){
+int n,t; 
+for(int i=0;s[i];i++);
+ n=i;
+ t=i;
+for(int i=0;i<n/2;i++)
+{
+ch=s[t];
+s[t]=s[i];
+s[i]=ch;
+}
+t=0;
+for(int i=0;i<n;i++)
+{
+if(s[i]==' ' && (s[i+1]!=' '|| s[i+1]=='\0'))
+{
+for(int x=t,y=i-1;x<i;x++)
+{
+char ch=s[x];
+s[x]=s[y];
+s[y]=ch;
+y--;
+}
+t=i+1;
+}
+}
+printf("%s",s);
+}
+
+10. Write a function to find the repeated character in a given string.
+#include<stdio.h>
+int main()
+{
+
+    char st[30]="hello world what'sup all good.";
+     repeat(st);
+}
+void repeat (char ch[])
+{
+       int fre[150]={0};
+    int i;
+       for(i=0;ch[i];i++)
+    {
+        fre[ch[i]]++;
+    }
+    for(i=0;i<150;i++)
+    {
+        if(fre[i]!=0)
+            printf("%d and %c\n",fre[i],i);
+    }
+}
+
